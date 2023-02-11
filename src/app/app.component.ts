@@ -7,4 +7,16 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-project';
+
+  numero:number = 0;
+
+  sumarNumero(){
+    this.numero+= 1;
+  }
+
+  restarNumero(){
+    this.numero-= 1;
+  }
 }
+
+
