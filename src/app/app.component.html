@@ -1,9 +1,7 @@
 <h1>Padre</h1>
 
-<button>Suma</button>
-<button >Resta</button>
-<button>Divison</button>
-<button>Multiplicacion</button>
-<button>Suma de 2 Cadenas</button>z
-
+<button (click)="sumarNumero()">sumarNumero</button>
+<button (click)="restarNumero()">restarNumero</button>
 {{numero}}
+
+<app-component-ngif [numero]="numero"></app-component-ngif>
