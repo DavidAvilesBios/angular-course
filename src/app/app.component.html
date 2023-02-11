@@ -1,12 +1,7 @@
-<h1>Numero1: {{numero}}</h1>
-<h1>Numero2: {{numero2}}</h1>
-<ul class="nav">
-  <button (click)="sumar()" class="btn btn-primary">Sumar</button>
-  <button (click)="restar()" class="btn btn-primary">Restar</button>
-  <button (click)="dividir()" class="btn btn-primary">Dividir</button>
-  <button (click)="multiplicar()" class="btn btn-primary">multiplicar</button>
-  <button (click)="sumarCadenas()" class="btn btn-primary">Sumar Cadenas</button>
-  <button (click)="restablecer()" class="btn btn-primary">Restablecer</button>
-</ul>
-<h1>{{resultado}}</h1>
-<h1>{{cadena3}}</h1>
+<h1>Padre</h1>
+
+<button (click)="sumarNumero()">sumarNumero</button>
+<button (click)="restarNumero()">restarNumero</button>
+{{numero}}
+
+<app-component-ngif [numero]="numero"></app-component-ngif>
