@@ -1,8 +1,5 @@
-<input type="number" [(ngModel)]="num1">
-<input type="number" [(ngModel)]="num2">
+<button (click)="sumarNumero()">sumarNumero</button>
+<button (click)="restarNumero()">restarNumero</button>
+{{numero}}
 
-<button (click)="suma()">Sumar</button>
-<button (click)="resta()">Restar</button>
-<button (click)="Multiplicar()">Multiplicar</button>
-<button (click)="dividir()">Dividir</button> 
-<p>Resultado: {{resultado}}</p>
+<app-component-ngif [numero]="numero"></app-component-ngif>
