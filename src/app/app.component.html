@@ -1,9 +1,8 @@
-<h1>Padre</h1>
+<input type="number" [(ngModel)]="num1">
+<input type="number" [(ngModel)]="num2">
 
-<button>Suma</button>
-<button >Resta</button>
-<button>Divison</button>
-<button>Multiplicacion</button>
-<button>Suma de 2 Cadenas</button>
-
-{{numero}}
+<button (click)="suma()">Sumar</button>
+<button (click)="resta()">Restar</button>
+<button (click)="Multiplicar()">Multiplicar</button>
+<button (click)="dividir()">Dividir</button> 
+<p>Resultado: {{resultado}}</p>

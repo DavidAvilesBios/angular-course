@@ -6,17 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'angular-project';
+  title = 'proyecto';
+  num1: number;
+  num2: number;
+  resultado: number;
 
-  numero:number = 0;
-
-  sumarNumero(){
-    this.numero+= 1;
+  suma() {
+    this.resultado = this.num1 + this.num2;
   }
-
-  restarNumero(){
-    this.numero-= 1;
+  resta() {
+    this.resultado = this.num1 - this.num2;
+  }
+  Multiplicar() {
+    this.resultado = this.num1 * this.num2;
+  }
+  dividir() {
+    this.resultado = this.num1 / this.num2;
   }
 }
-
-
