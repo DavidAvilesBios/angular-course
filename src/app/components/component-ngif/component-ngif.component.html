@@ -1,7 +1,10 @@
-<h1>HIJO {{numero}}</h1>
+<h1>HIJO {{numero}} {{numero2}}</h1>
 
 <div *ngIf="numero >= 10">
   <h1>El numero es mayor a 10</h1>
+  <div *ngIf="numero2 >= 7">
+    <h1>El 2do numero es mayor a 7</h1>
+  
   <button>
   numero mayor
 </button>
@@ -13,11 +16,9 @@
 
 </div>
 
-
 <button *ngIf="numero">
 numero boton 
 </button>
-
 
 <span *ngIf="numero">
  numero mensaje
