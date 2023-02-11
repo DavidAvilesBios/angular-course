@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-component-ngif',
@@ -7,12 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComponentNgifComponent implements OnInit {
 
-  //@Input() numero:number;
+  @Input() numero?: number;
+  @Input() numero2?: number;
 
   constructor() { }
 
-  ngOnInit(): void {
-
-  }
+  ngOnInit(): void {}
 
 }
