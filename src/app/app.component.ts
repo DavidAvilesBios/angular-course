@@ -6,39 +6,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Node';
-  numero:number = 5;
-  numero2:number = 10;
-  cadena1:string = "hola ";
-  cadena2:string = "mundo";
-  cadena3:string = "";
-  resultado:number = 0;
-  sumar(){
-    this.resultado = this.numero + this.numero2;
+  title = 'angular-project';
+
+  numero:number = 0;
+  numoer2:number = 0;
+
+  sumarNumero(){
+    this.numero+= 1;
   }
 
-  restar(){
-    this.resultado = this.numero - this.numero2;
+  restarNumero(){
+    this.numero-= 1;
+  }
+  sumarNumero2(){
+    this.numero+= 1;
   }
 
-  dividir(){
-    if(this.numero === 0 || this.numero2 === 0){
-      console.log("Error");
-    }
-    else{
-      this.resultado = this.numero / this.numero2;
-    } 
-  }
-
-  multiplicar(){
-    this.resultado = this.numero * this.numero2;
-  }
-
-  sumarCadenas(){
-    this.cadena3 = this.cadena1 + this.cadena2;
-  }
-  restablecer(){
-    this.resultado = 0;
-    this.cadena3 = "";
+  restarNumero2(){
+    this.numero-= 1;
   }
 }
