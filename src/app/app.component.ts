@@ -53,6 +53,18 @@ export class AppComponent {
      let numeros = [1,2,3,4,5,6,7,8,9]
      return numeros;
    }
+
+   addRow(mensaje){
+     console.log(mensaje);
+     let row = {
+      code: this.products.length + 1,
+      name: 'Coca cola',
+      category: 'Refresco',
+      quantity: 1
+     }
+
+     this.products.push(row);
+   }
 }
 
 

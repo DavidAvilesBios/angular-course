@@ -28,26 +28,28 @@
     </div>
   </nav>
 
-  <div class="container" >
-  <table class="table table-bordered pt-3 mt-3">
-        <tr>
-            <th>Code</th>
-            <th>Name</th>
-            <th>Category</th>
-            <th>Quantity</th>
-            <th>Available</th>
-        </tr>
-        <tr *ngFor="let product of products">
-            <td>{{product.code}}</td>
-            <td>{{product.name}}</td>
-            <td>{{product.category}}</td>
-            <td>{{product.quantity}}</td>
-            <td *ngIf="product.quantity === 0">Falso</td>
-            <td *ngIf="product.quantity > 0">Verdadero</td>
-        </tr>
-</table>
-</div>
+  <app-component-table [products]="products" (addRow)="addRow($event)"></app-component-table>
 
 
 <!--<component-navbar></component-navbar>
 <component-table [products]="products"></component-table>-->
+
+<!--
+    rama-test
+
+    git checkout rama-test 
+    git pull
+    git checkout su-rama
+    git merge rama-test
+    resolver conflictos
+    git add .
+    git commit -m "mensaje"
+    git push 
+
+    git checkout rama-test 
+    git pull
+    git checkout -b rama-nuevo
+    git add .
+    git commit -m "mensaje"
+    git push 
+-->
