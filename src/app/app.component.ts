@@ -12,25 +12,7 @@ export class AppComponent {
   numero:number = 0;
   numero2:number = 0;
 
-  products = [
-    {
-      code: 1,
-      name: 'Coca cola',
-      category: 'Refresco',
-      quantity: 12
-    },
-    {
-      code: 2,
-      name: 'Mirinda',
-      category: 'Refresco',
-      quantity: 12
-    },
-    {
-      code: 3,
-      name: 'Coca cola Zero',
-      category: 'Refresco',
-      quantity: 12
-    }
+  
 
   ]
   
