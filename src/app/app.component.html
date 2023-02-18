@@ -49,4 +49,4 @@
 </div>-->
 
 <app-component-navbar></app-component-navbar>
-<app-component-table [products]="products"></app-component-table>
+<app-component-table [products]="products" (addRow)="addRow($event)"></app-component-table>

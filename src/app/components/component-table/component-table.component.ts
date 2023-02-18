@@ -1,4 +1,5 @@
-import { Component, Input,OnInit } from '@angular/core';
+import { Component, Input,OnInit, Output } from '@angular/core';
+import { EventEmitter } from 'stream';
 
 @Component({
   selector: 'app-component-table',
@@ -8,7 +9,8 @@ import { Component, Input,OnInit } from '@angular/core';
 export class ComponentTableComponent implements OnInit {
 
   constructor() { }
-  @Input products  = [];
+  @Input() products  = [];
+  @Output() addRow: EventEmitter<any> = new EventEmitter<any>();
   ngOnInit(): void {
   }
 }
