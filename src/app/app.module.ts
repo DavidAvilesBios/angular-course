@@ -3,11 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ComponentNgifComponent } from './components/component-ngif/component-ngif.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { TableComponent } from './table/table.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ComponentNgifComponent
+    ComponentNgifComponent,
+    NavbarComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule

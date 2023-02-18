@@ -1,5 +1,5 @@
 
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +8,20 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-project';
-  numeros = [1,2,3,4,5,6,7,8,9,10];
-
-  numero:number = 0;
-  numero2:number = 0;
+  eliminarFila(){
+    const fila = this.products.pop();
+    console.log(fila);
+  }
+  addProduct(mensaje) {
+    console.log(mensaje);
+    const newProduct = {
+      code: this.products.length,
+      name: 'New Product',
+      category: 'Uncategorized',
+      quantity: (Math.floor(Math.random() * 10))
+    };
+    this.products.push(newProduct);
+  }
 
   products = [
     {
@@ -35,25 +45,7 @@ export class AppComponent {
 
   ]
   
-  sumarNumero(){
-    this.numero+= 1;
-  }
-
-  restarNumero(){
-    this.numero-= 1;
-  }
-
-  sumarNumero2(){
-    this.numero2+= 1;
-  }
-
-  restarNumero2(){
-    this.numero2-= 1;
-  }
-   crearNumeros(){
-     let numeros = [1,2,3,4,5,6,7,8,9]
-     return numeros;
-   }
+ 
 }
 
 
