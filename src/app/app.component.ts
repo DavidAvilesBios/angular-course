@@ -49,18 +49,19 @@ export class AppComponent {
    crearNumeros(){
      let numeros = [1,2,3,4,5,6,7,8,9]
      return numeros;
-  }
+   }
 
-  addRow(){
-    let row ={
+   addRow(mensaje){
+     console.log(mensaje);
+     let row = {
       code: this.products.length + 1,
       name: 'Coca cola',
       category: 'Refresco',
-      quantity: 2
-    }
+      quantity: 1
+     }
 
-    this.products.push(row)
-  }
+     this.products.push(row);
+   }
 }
 
 

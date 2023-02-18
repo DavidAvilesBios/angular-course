@@ -10,7 +10,7 @@ export class ComponentTableComponent implements OnInit {
 
   constructor() { }
   @Input() products  = [];
-  @Output() addRow: EventEmitter<any> = new EventEmitter<any>();
+  //@Output() addRow: EventEmitter<any> = new EventEmitter<any>();
   ngOnInit(): void {
   }
 }

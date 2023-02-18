@@ -1,0 +1,23 @@
+
+<div class="container pt-3 mt-3" >
+
+<button type="button" class="btn btn-primary" (click)="addRow.emit('data')">Agregar td</button>
+
+<table class="table table-bordered ">
+      <tr>
+          <th>Code</th>
+          <th>Name</th>
+          <th>Category</th>
+          <th>Quantity</th>
+          <th>Available</th>
+      </tr>
+      <tr *ngFor="let product of products">
+          <td>{{product.code}}</td>
+          <td>{{product.name}}</td>
+          <td>{{product.category}}</td>
+          <td>{{product.quantity}}</td>
+          <td *ngIf="product.quantity === 0">Falso</td>
+          <td *ngIf="product.quantity > 0">Verdadero</td>
+      </tr>
+</table>
+</div>
