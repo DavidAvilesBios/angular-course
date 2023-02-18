@@ -15,4 +15,7 @@ import { ComponentNgifComponent } from './components/component-ngif/component-ng
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  
+
+}

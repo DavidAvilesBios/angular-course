@@ -24,6 +24,8 @@ export class AppComponent {
   restarNumero2(){
     this.numero2-= 1;
   }
+
+  
 }
 
 
