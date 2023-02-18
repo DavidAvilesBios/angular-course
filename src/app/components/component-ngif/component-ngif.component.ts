@@ -6,20 +6,11 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./component-ngif.component.css']
 })
 export class ComponentNgifComponent implements OnInit {
-<<<<<<< HEAD
-  
-=======
-
->>>>>>> rama-test
   @Input() numero?: number;
+  @Input() numero2?: number;
 
   constructor() { }
 
-<<<<<<< HEAD
-  ngOnInit(): void {
-  }
-=======
   ngOnInit(): void {}
->>>>>>> rama-test
 
 }
