@@ -1,12 +1,53 @@
-<h1>Padre</h1>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Dropdown link
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Action</a>
+            <a class="dropdown-item" href="#">Another action</a>
+            <a class="dropdown-item" href="#">Something else here</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-<button (click)="sumarNumero()">sumarNumero</button>
-<button (click)="restarNumero()">restarNumero</button>
-{{numero}}
+  <div class="container" >
+  <table class="table table-bordered pt-3 mt-3">
+        <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Quantity</th>
+            <th>Available</th>
+        </tr>
+        <tr *ngFor="let product of products">
+            <td>{{product.code}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.category}}</td>
+            <td>{{product.quantity}}</td>
+            <td *ngIf="product.quantity === 0">Falso</td>
+            <td *ngIf="product.quantity > 0">Verdadero</td>
+        </tr>
+</table>
+</div>
 
-<button (click)="sumarNumero2()">sumarNumero</button>
-<button (click)="restarNumero2()">restarNumero</button>
-{{numero2}}
-<app-component-ngif [numero]="numero" [numero2]="numero2"></app-component-ngif>
 
-<div *ngFor="let numero of numeros">{{numero}}</div>
+<!--<component-navbar></component-navbar>
+<component-table [products]="products"></component-table>-->
