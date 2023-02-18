@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProductInterface } from './interfaces';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +13,7 @@ export class AppComponent {
   numero:number = 0;
   numero2:number = 0;
 
-  products = [
+  products: ProductInterface[] = [
     {
       code: 1,
       name: 'Coca cola',
@@ -31,8 +32,7 @@ export class AppComponent {
       category: 'Refresco',
       quantity: 12
     }
-
-  ]
+  ];
   
   sumarNumero(){
     this.numero+= 1;
@@ -49,11 +49,23 @@ export class AppComponent {
   restarNumero2(){
     this.numero2-= 1;
   }
-  
+
   crearNumeros(){
     let numeros = [1,2,3,4,5,6,7,8,9]
     return numeros;
   }
+
+  agrgarFila(){
+    this.products.push({
+      code: this.products.length + 1,
+      name: 'Coca cola Zero',
+      category: 'Refresco',
+      quantity: Number(Math.floor(Math.random() * 100))
+    })
+  }
+
+  eliminarFila(){
+    const fila = this.products.pop();
+    console.log(fila);
+  }
 }
-
-

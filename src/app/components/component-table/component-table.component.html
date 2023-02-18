@@ -1,0 +1,21 @@
+<div class="container">
+  <button class="btn btn-primary" (click)="onAgregarFila.emit()">Agregar td</button>
+  <button class="btn btn-primary" (click)="onPopFila.emit()">Eliminar ultimo td</button>
+  <table class="table table-bordered pt-3 mt-3">
+    <tr>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Category</th>
+        <th>Quantity</th>
+        <th>Available</th>
+    </tr>
+    <tr *ngFor="let product of products" class="animate-td">
+        <td>{{product.code}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.category}}</td>
+        <td>{{product.quantity}}</td>
+        <td *ngIf="product.quantity === 0">Falso</td>
+        <td *ngIf="product.quantity > 0">Verdadero</td>
+    </tr>
+  </table>
+</div>
