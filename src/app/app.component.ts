@@ -8,23 +8,30 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'angular-project';
 
-  numero:number = 0;
-  numero2:number = 0;
+  numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-  sumarNumero(){
-    this.numero+= 1;
+  numero: number = 0;
+  numero2: number = 0;
+  
+  sumarNumero() {
+    this.numero += 1;
   }
 
-  restarNumero(){
-    this.numero-= 1;
+  restarNumero() {
+    this.numero -= 1;
   }
 
-  sumarNumero2(){
-    this.numero2+= 1;
+  sumarNumero2() {
+    this.numero2 += 1;
   }
 
-  restarNumero2(){
-    this.numero2-= 1;
+  restarNumero2() {
+    this.numero2 -= 1;
+  }
+
+  crearNumeros() {
+    let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    return numeros;
   }
 
 }
