@@ -1,3 +1,6 @@
 <app-component-navbar></app-component-navbar>
-
-<app-component-table></app-component-table>
+<app-component-table 
+[products]="products" 
+(agregarTd)="agregarTd($event)" 
+(eliminarTd)="eliminarTd($event)"
+></app-component-table>
