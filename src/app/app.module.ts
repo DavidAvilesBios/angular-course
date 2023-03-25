@@ -9,6 +9,8 @@ import { Component1Component } from './components/component1/component1.componen
 import { Component2Component } from './components/component2/component2.component';
 import { AppRoutingModuleModule } from './app-routing-module/app-routing-module.module';
 import { RouterModule } from '@angular/router';
+import { CrudComponent } from './components/crud/crud.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,12 +19,14 @@ import { RouterModule } from '@angular/router';
     Test2Component,
     NavbarComponent,
     Component1Component,
-    Component2Component
+    Component2Component,
+    CrudComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModuleModule,
     RouterModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent,TestComponent]
