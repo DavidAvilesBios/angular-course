@@ -9,8 +9,9 @@ import { Component1Component } from './components/component1/component1.componen
 import { Component2Component } from './components/component2/component2.component';
 import { AppRoutingModuleModule } from './app-routing-module/app-routing-module.module';
 import { RouterModule } from '@angular/router';
-import { Component3Component } from './components/component3/component3.component';
-import { ComponentroutenotfoundComponent } from './components/componentroutenotfound/componentroutenotfound.component';
+import { CrudComponent } from './components/crud/crud.component';
+import { FormsModule } from '@angular/forms';
+import { TableComponent } from './components/table/table.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +21,14 @@ import { ComponentroutenotfoundComponent } from './components/componentroutenotf
     NavbarComponent,
     Component1Component,
     Component2Component,
-    Component3Component,
-    ComponentroutenotfoundComponent
+    CrudComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModuleModule,
     RouterModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

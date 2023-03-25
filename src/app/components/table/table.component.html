@@ -1,0 +1,36 @@
+<div class="container mt-5">
+    <a class="btn btn-primary" routerLink="/nuevoAlumno">Guardar Alumno</a>
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Acciones</th>
+            <th scope="col">ID</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Email</th>
+            <th scope="col">Matricula</th>
+            <th scope="col">Edad</th>
+            <th scope="col">Domicilio</th>
+            <th scope="col">Ciudad</th>
+            <th scope="col">Facultad</th>
+            <th scope="col">Codigo Postal</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let alumno of alumnos">
+            <td>
+                <button class="btn btn-secondary" (click)="editarAlumno()">Editar</button>
+                <button class="btn btn-danger" (click)="eliminarAlumno(alumno.id)">Eliminar</button>
+            </td>
+            <td>{{alumno.id}}</td>
+            <td>{{alumno.nombre}}</td>
+            <td>{{alumno.email}}</td>
+            <td>{{alumno.matricula}}</td>
+            <td>{{alumno.domicilio}}</td>
+            <td>{{alumno.edad}}</td>
+            <td>{{alumno.ciudad}}</td>
+            <td>{{alumno.facultad}}</td>
+            <td>{{alumno.codigoPostal}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
