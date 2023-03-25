@@ -1,0 +1,61 @@
+
+<div class="container py-4">
+  <div class="row mb-3">
+    <h1 class="fs-5 col-md-5 col-6">Tabla de Alumnos</h1>
+    <div class="col-md-5 col-6 d-flex gap-2">
+      <input type="text" class="form-control d-inline-block" placeholder="Buscar">
+      <button type="button" class="btn btn-primary">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+    <div class="col-md-2 col-12 mt-3 mt-md-0 px-4">
+      <button type="button" class="btn btn-primary w-100" (click)="agregarAlumno()">Agregar</button>
+    </div>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Email</th>
+          <th scope="col">Matricula</th>
+          <th scope="col">Edad</th>
+          <th scope="col">Domicilio</th>
+          <th scope="col">Ciudad</th>
+          <th scope="col">Facultad</th>
+          <th scope="col">Codigo Postal</th>
+          <th colspan="2">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let alumno of alumnos">
+          <th scope="row">{{ alumno.id }}</th>
+          <td>{{ alumno.nombre }}</td>
+          <td>{{ alumno.email }}</td>
+          <td>{{ alumno.matricula }}</td>
+          <td>{{ alumno.edad }}</td>
+          <td>{{ alumno.domicilio }}</td>
+          <td>{{ alumno.ciudad }}</td>
+          <td>{{ alumno.facultad }}</td>
+          <td>{{ alumno.codigoPostal }}</td>
+          <td>
+            <button type="button" class="btn btn-primary" (click)="editarAlumno(alumno.id)">
+              <i class="bi bi-pencil-square"></i>
+            </button>
+          </td>
+          <td>
+            <button type="button" class="btn btn-danger" (click)="eliminarAlumno(alumno.id)">
+              <i class="bi bi-trash"></i>
+            </button>
+          </td>
+        </tr>
+  
+        <tr *ngIf="!alumnos || alumnos.length === 0">
+          <th colspan="11" class="text-center">No hay alumnos registrados</th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

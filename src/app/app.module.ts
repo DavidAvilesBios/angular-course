@@ -9,6 +9,7 @@ import { AppRoutingModuleModule } from './app-routing-module/app-routing-module.
 import { RouterModule } from '@angular/router';
 import { CrudComponent } from './components/crud/crud.component';
 import { FormsModule } from '@angular/forms';
+import { TablaAlumnosComponent } from './components/tabla-alumnos/tabla-alumnos.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     Component1Component,
     Component2Component,
-    CrudComponent
+    CrudComponent,
+    TablaAlumnosComponent,
   ],
   imports: [
     BrowserModule,
