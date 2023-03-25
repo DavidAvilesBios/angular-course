@@ -2,19 +2,27 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { ComponentNgifComponent } from './components/component-ngif/component-ngif.component';
-import { ComponentNavbarComponent } from './components/component-navbar/component-navbar.component';
-import { ComponentTableComponent } from './components/component-table/component-table.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { Component1Component } from './components/component1/component1.component';
+import { Component2Component } from './components/component2/component2.component';
+import { AppRoutingModuleModule } from './app-routing-module/app-routing-module.module';
+import { RouterModule } from '@angular/router';
+import { CrudComponent } from './components/crud/crud.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ComponentNgifComponent,
-    ComponentNavbarComponent,
-    ComponentTableComponent
+    NavbarComponent,
+    Component1Component,
+    Component2Component,
+    CrudComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModuleModule,
+    RouterModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

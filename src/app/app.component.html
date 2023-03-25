@@ -1,20 +1,3 @@
-<!-- 
-<div>
-  <button (click)="sumarNumero()">sumarNumero</button>
-  <button (click)="restarNumero()">restarNumero</button>
-  <span>Número 1: {{ numero }}</span>
-</div>
-<div>
-  <button (click)="sumarNumero2()">sumarNumero2</button>
-  <button (click)="restarNumero2()">restarNumero2</button>
-  <span>Número 2: {{ numero2 }}</span>
-</div> -->
-<!-- <app-component-ngif [numero]="numero" [numero2]="numero2"></app-component-ngif> -->
+<app-navbar></app-navbar>
 
-<app-component-navbar></app-component-navbar>
-<app-component-table
-  [products]="products"
-  (onAgregarFila)="agrgarFila()"
-  (onPopFila)="eliminarFila()"
-></app-component-table>
-
+<router-outlet></router-outlet>
