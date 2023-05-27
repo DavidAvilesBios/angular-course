@@ -9,6 +9,8 @@ import { Component1Component } from './components/component1/component1.componen
 import { Component2Component } from './components/component2/component2.component';
 import { AppRoutingModuleModule } from './app-routing-module/app-routing-module.module';
 import { RouterModule } from '@angular/router';
+import { PruebaComponent } from './prueba/prueba.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { RouterModule } from '@angular/router';
     Test2Component,
     NavbarComponent,
     Component1Component,
-    Component2Component
+    Component2Component,
+    PruebaComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
